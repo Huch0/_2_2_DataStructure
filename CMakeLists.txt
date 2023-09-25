@@ -8,3 +8,6 @@ add_executable(Pa_01_1
 
 add_executable(Pa_01_2
         "[PA 01] C++ Practice - Classes, Templates, and Operator Overloading/using_getter_setter.cpp")
+
+add_executable(Array
+        Array/testArray.cpp)
