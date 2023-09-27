@@ -11,3 +11,5 @@ add_executable(Pa_01_2
 
 add_executable(Array
         Array/testArray.cpp)
+add_executable(LinkedList LinkedList/LinkedList.h
+        LinkedList/testLinkedList.cpp)
