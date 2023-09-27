@@ -8,7 +8,7 @@ template <typename T>
 class Node {
 private:
     T data_;
-    Node *next_;
+    Node<T> *next_;
 
     friend class LinkedList<T>;
 
@@ -34,7 +34,7 @@ public:
 
 
     // Check is linked list empty
-    bool isEmpty() const {
+    [[nodiscard]] bool isEmpty() const {
         return head_ == nullptr;
     }
 
@@ -88,7 +88,7 @@ public:
     }
 
     // Display the contents of the linked list
-    void display() {
+    void display() const {
         Node<T>* tracer = head_;
 
         while (tracer != nullptr) {

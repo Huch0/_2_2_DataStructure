@@ -13,3 +13,5 @@ add_executable(Array
         Array/testArray.cpp)
 add_executable(LinkedList LinkedList/LinkedList.h
         LinkedList/testLinkedList.cpp)
+add_executable(DoublyLinkedList LinkedList/DoublyLinkedList.h
+        LinkedList/testDoublyLinkedList.cpp)
