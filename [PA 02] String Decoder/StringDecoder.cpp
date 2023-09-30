@@ -22,7 +22,7 @@ public:
         data_ = newString;
     }
 
-    pair<string, int> decodeData(int i) const;
+    pair<string, int> decodeData(int i, int isOpen) const;
 
     static bool isValidCharacter(char c) {
         // Valid characters for 'text'
@@ -48,7 +48,7 @@ public:
 
 // Implement your class here
 
-pair<string, int> StringDecoder::decodeData(int i) const {
+pair<string, int> StringDecoder::decodeData(int i, int isOpen) const {
     string resultText;
 
     while (data_[i] != '\0') {
@@ -77,7 +77,7 @@ pair<string, int> StringDecoder::decodeData(int i) const {
             }
 
             i++;
-            pair<string, int> subTextInfo = decodeData(i);
+            pair<string, int> subTextInfo = decodeData(i, 1);
             string subText = subTextInfo.first;
 
             if (subText == INVALID_INPUT)
@@ -90,15 +90,24 @@ pair<string, int> StringDecoder::decodeData(int i) const {
             // Update index based on subTextInfo
             i = subTextInfo.second;
         } else if (currentChar == '}') {
+            // Closed unopened brace
+            if (!isOpen)
+                return make_pair(INVALID_INPUT, i);
             i++;
-            return make_pair(resultText, i); // Return the decoded string and the updated index
+
+            // Return the decoded string and the updated index
+            return make_pair(resultText, i);
         } else {
+            // Invalid char
             if (!isValidCharacter(currentChar))
                 return make_pair(INVALID_INPUT, i);
             resultText += currentChar;
             i++;
         }
     }
+    // Unclosed open brace
+    if (isOpen)
+        return make_pair(INVALID_INPUT, i);
 
     return make_pair(resultText, i); // Return the decoded string and the updated index
 }
@@ -112,7 +121,7 @@ istream& operator >> (istream& istream, StringDecoder& sd) {
 
     sd.setData(inputString);
 
-    sd.setData(sd.decodeData(0).first);
+    sd.setData(sd.decodeData(0, 0).first);
 
     return istream;
 }
