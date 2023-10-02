@@ -16,4 +16,4 @@ add_executable(LinkedList LinkedList/LinkedList.h
 add_executable(DoublyLinkedList LinkedList/DoublyLinkedList.h
         LinkedList/testDoublyLinkedList.cpp)
 add_executable(PA_02
-        "[PA 02] String Decoder/StringDecoder.cpp")
+        "[PA 02] String Decoder/StackStringDecoder.cpp")
