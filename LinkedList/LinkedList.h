@@ -39,7 +39,7 @@ public:
     }
 
     // Return data of first node of linked list
-    const T& front() const {
+    T& front() {
         if (isEmpty())
             throw std::out_of_range("Index out of bounds in LinkedList::front()");
         return head_->data_;
