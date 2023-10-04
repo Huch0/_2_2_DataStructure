@@ -9,12 +9,24 @@ add_executable(Pa_01_1
 add_executable(Pa_01_2
         "[PA 01] C++ Practice - Classes, Templates, and Operator Overloading/using_getter_setter.cpp")
 
-add_executable(Array
-        Array/testArray.cpp)
-add_executable(LinkedList LinkedList/LinkedList.h
-        LinkedList/testLinkedList.cpp)
-add_executable(DoublyLinkedList LinkedList/DoublyLinkedList.h
-        LinkedList/testDoublyLinkedList.cpp)
 add_executable(PA_02
         "[PA 02] String Decoder/StackStringDecoder.cpp")
-add_executable(Stack Stack/testStack.cpp)
+
+add_executable(Array
+        Array/testArray.cpp)
+
+add_executable(LinkedList
+        LinkedList/LinkedList.h
+        LinkedList/testLinkedList.cpp)
+
+add_executable(DoublyLinkedList
+        LinkedList/DoublyLinkedList.h
+        LinkedList/testDoublyLinkedList.cpp)
+
+add_executable(Stack
+        Stack/Stack.h
+        Stack/testStack.cpp)
+
+add_executable(Queue
+        Queue/Queue.h
+        Queue/testQueue.cpp)

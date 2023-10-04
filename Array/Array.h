@@ -59,9 +59,9 @@ public:
     }
 
     // Get the value of an element at a specific index
-    T get(const int index) {
+    const T& get(const int index) const {
         if (index < 0 || index >= size_) {
-            throw std::out_of_range("Index out of bounds in Array::get()");
+            throw std::out_of_range("Index out of bounds in Array::get()\nindex = " + std::to_string(index));
         }
 
         return array_[index];
