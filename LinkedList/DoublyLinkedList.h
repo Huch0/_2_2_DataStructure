@@ -134,6 +134,16 @@ public:
         remove(searchNode(data));
     }
 
+    // Return the first element of the doubly linked list.
+    const T& front() const {
+        return header_->next_->data_;
+    }
+
+    // Return the last element of the doubly linked list.
+    const T& back() const {
+        return trailer_->prev_->data_;
+    }
+
     // Display the contents of doubly linked list
     // O(n)
     void display() const {

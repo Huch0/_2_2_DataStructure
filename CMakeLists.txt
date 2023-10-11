@@ -30,3 +30,6 @@ add_executable(Stack
 add_executable(Queue
         Queue/Queue.h
         Queue/testQueue.cpp)
+add_executable(Deque
+        Queue/Deque.h
+        Queue/testDeque.cpp)
