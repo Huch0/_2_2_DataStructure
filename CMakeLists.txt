@@ -33,3 +33,7 @@ add_executable(Queue
 add_executable(Deque
         Queue/Deque.h
         Queue/testDeque.cpp)
+
+add_executable(Tree
+        Tree/Tree.h
+        Tree/testTree.cpp)

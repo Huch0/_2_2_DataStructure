@@ -124,6 +124,11 @@ public:
         size_ += 1;
     }
 
+    // Push an element at the back of the array
+    void push(const T& element) {
+        add(size_, element);
+    }
+
     // Remove an element at a specific index
     T remove(const int index) {
         if (isEmpty()) {
