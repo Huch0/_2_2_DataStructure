@@ -12,6 +12,9 @@ add_executable(Pa_01_2
 add_executable(PA_02
         "[PA 02] String Decoder/StackStringDecoder.cpp")
 
+add_executable(PA03
+        "[PA 03] Common Ancestors in a Binary Search Tree/BinarySearchTree.cpp")
+
 add_executable(Array
         Array/testArray.cpp)
 
