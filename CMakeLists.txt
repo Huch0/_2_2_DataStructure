@@ -15,6 +15,11 @@ add_executable(PA_02
 add_executable(PA03
         "[PA 03] Common Ancestors in a Binary Search Tree/BinarySearchTree.cpp")
 
+
+add_executable(PA04
+        "[PA 04] MAT-ZIP/array.cpp"
+        "[PA 04] MAT-ZIP/priorityQueue.cpp")
+
 add_executable(Array
         Array/testArray.cpp)
 
