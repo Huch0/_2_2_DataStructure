@@ -20,6 +20,14 @@ add_executable(PA04
         "[PA 04] MAT-ZIP/array.cpp"
         "[PA 04] MAT-ZIP/priorityQueue.cpp")
 
+add_executable(PA05
+        "[PA 05] My Hash Table/myHashTable.cpp"
+)
+
+add_executable(ValidatePA05
+        "[PA 05] My Hash Table/validateTestCase.cpp"
+)
+
 add_executable(Array
         Array/testArray.cpp)
 
