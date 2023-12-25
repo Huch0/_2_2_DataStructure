@@ -28,8 +28,9 @@ add_executable(ValidatePA05
         "[PA 05] My Hash Table/validateTestCase.cpp"
 )
 
-add_executable(Array
-        Array/testArray.cpp)
+add_executable(PA06
+        "[PA 06] Climate Crisis/ClimateCrisis.cpp"
+)
 
 add_executable(LinkedList
         LinkedList/LinkedList.h
